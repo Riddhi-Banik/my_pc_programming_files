@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ideal Tots Preschool</title>
+        <style>
+            *
+            {
+                padding:0;
+                margin:0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 32px;
+            }
+            .cubic-shade
+            {
+                box-shadow: 0 0 5px rgb(255, 255, 255);
+            }
+            body
+            {
+                background-color: rgb(255, 115, 0);
+            }
+            .sticky-head
+            {
+                position: sticky;
+                z-index: 1;
+                top:0;
+                display: block;
+                background-color: rgb(255, 255, 255);
+                width: auto;
+                height: 105px;
+            }
+            #logo
+            {
+                word-spacing: 3px;
+                letter-spacing: 2px;
+                float: left;
+                padding-left: 35px;
+                padding-top: 15px;
+                font-size: 30px;
+                color: white;
+                text-shadow: 2px 2px rgb(255, 115, 0), 
+                            2px -2px rgb(255, 115, 0), 
+                            -2px 2px rgb(255, 115, 0), 
+                            -2px -2px rgb(255, 115, 0),
+
+                            2px 0px rgb(255, 115, 0), 
+                            -2px 0px rgb(255, 115, 0), 
+                            0px 2px rgb(255, 115, 0), 
+                            0px -2px rgb(255, 115, 0);    
+            }
+            #scaff2
+            {
+                animation-name:pagiflp;
+                animation-fill-mode: backwards;
+                animation-duration: 1s;
+            }
+            :root
+            {
+                --Fhome: translateX(0px);
+                --Fabout: translateX(-1800px);
+                --Fprograms: translateX(3600px);
+                --Fstaff: translateX(5400px);
+                --Fnews: translateX(7200px);
+                --Fcontact: translateX(9000px)
+            }
+            .container
+            {
+                position: absolute;
+                width: 78%;
+                margin-top: 100px;
+                height: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+                padding: 10px;
+                border-radius: 4px;
+                
+            }
+            @keyframes pagiflp 
+            {
+                from{transform: var(--Fhome);}
+                to{transform: var(--Fabout);}    
+            }
+         
+            #btn-container
+            {
+                float: right;
+                height: 100%;
+                width: 1350px;
+                background-color: rgb(255, 255, 255);
+                padding-left: 0px;
+            }
+            button
+            {
+                float: left;
+                font-size: 40px;
+                height: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 0;
+                border-color:black;
+                border-style: solid;
+                padding-left:30px;
+                padding-right:30px;    
+            }
+            button:hover
+            {
+                background-color: rgb(190, 190, 190);
+                transition-duration: 0.05s;
+                transition-timing-function: ease;
+            }
+            button:active
+            {
+                background-color:rgb(255, 115, 0) ;
+                color: rgb(255, 255, 255);
+            }
+            #image-clipper
+            {
+                margin-left: auto;
+                margin-right:auto;
+                overflow: hidden;
+                position: relative;
+
+               
+            }
+            .scaff
+            {
+                animation-duration: 30s;
+                animation-name:clif;
+                animation-fill-mode: none;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+            }
+            @keyframes clif 
+            {
+                0%   {transition-timing-function: ease;
+                      transform: translateX(-0px);}
+
+                12.5%{transition-timing-function: ease;
+                      transform: translateX(-705px);}
+                25%  {transition-timing-function: ease;
+                      transform: translateX(-705px);}
+
+                37.5%{transition-timing-function: ease;
+                      transform: translateX(-1410px);}
+                50%  {transition-timing-function: ease;
+                      transform: translateX(-1410px);}
+
+                62.5%{transition-timing-function: ease;
+                     transform: translateX(-2115px);}
+                75%  {transition-timing-function: ease;
+                      transform: translateX(-2115px);}
+
+                87.5%{transition-timing-function: ease;
+                      transform: translateX(-2820px);  }
+                100% {transition-timing-function: ease;
+                      transform: translateX(-2820px);}
+            }
+            img
+            {
+                display: inline;
+                position: absolute;
+            }
+            #image-clipper
+            {
+                border-style:solid;
+                border-width: 3px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="sticky-head cubic-shade">
+            <div id="logo">
+                Ideal Tots<br>
+                <b style="font-weight: 400; font-size: 40px; ">Preschool</b>
+            </div>
+            <div id="btn-container">
+                <button style="border-left-width: 4px;">Home</button>
+                <button>About us</button>
+                <button>Programs</button>
+                <button>Staff</button>
+                <button>News & Events</button>
+                <button style="border-right-width: 4px;">Contact</button>
+            </div>
+        </div>
+        <div id="scaff2">
+            <div class="container cubic-shade" style="transform: translateX(240px);">
+                <div id="image-clipper" style="height: 700px;width: 700px;background-color: rgb(0, 0, 0);">
+                    <div class="scaff">
+                        <img width="700px" height="700px" src="https://previews.123rf.com/images/poznyakov/poznyakov1801/poznyakov180100280/93868402-child-dough-play-in-school-plasticine-for-children-mold-from-plasticine-in-kindergarten-kids-knead.jpg">
+                        <img width="700px" height="700px" style="right: -705px;" src="https://www.montrealfamilies.ca/wp-content/uploads/2021/08/Prepare-Kindergarten-1843x1080-1.jpg">
+                        <img width="700px" height="700px" style="right: -1410px;" src="https://www.chalkbeat.org/resizer/zPjRSTbkHzKjfMDYwTT2PFPAsdU=/1600x900/filters:format(jpg):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/civicnewscompany/AGDF3SJBHZDI5PM6XA3LIWXTEI.jpg">
+                        <img width="700px" height="700px" style="right: -2115px;" src="https://cdn-gabhm.nitrocdn.com/gTSpTfDxTRygmEkkwuFGltbbKkVMXAzm/assets/images/optimized/rev-32e4349/www.happybunnies.co.uk/wp-content/uploads/2023/09/All-about-me.jpg">
+                        <img width="700px" height="700px" style="right: -2820px;" src="https://previews.123rf.com/images/poznyakov/poznyakov1801/poznyakov180100280/93868402-child-dough-play-in-school-plasticine-for-children-mold-from-plasticine-in-kindergarten-kids-knead.jpg">
+                    </div>
+                </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero architecto omnis officia hic atque culpa, in est, magnam minima aperiam pariatur consectetur inventore ratione, quibusdam quasi unde tempore placeat delectus id sunt beatae laborum ipsam? Placeat ad error in fuga. Laborum magni facere nam sequi ex eveniet autem corporis? Magni earum ipsam ducimus expedita suscipit ratione repellat porro rerum, obcaecati sunt assumenda iste modi cum corrupti? Eaque asperiores accusantium voluptates excepturi a, obcaecati dolore delectus. Doloremque veniam sit adipisci, dolor ea quaerat? Ipsum aliquam delectus architecto consectetur sunt aliquid sapiente cum totam excepturi. Praesentium, eos. Ex, iure facilis voluptatum exercitationem animi odit doloremque tempore in veniam nam porro expedita sunt maxime ut ad cupiditate, numquam officia temporibus adipisci similique deserunt velit? Deleniti accusantium consectetur, dolorem rerum adipisci optio cupiditate commodi impedit, nobis perspiciatis nihil! Adipisci eligendi corporis veritatis alias corrupti assumenda aliquam voluptas fugiat soluta harum, obcaecati earum tempora facere reiciendis quaerat dignissimos optio quidem ipsa perspiciatis numquam similique magnam labore! Necessitatibus obcaecati voluptatem illum consequatur nesciunt ipsum amet voluptas, mollitia illo officia laboriosam quasi suscipit corrupti aliquam error, nemo omnis excepturi! Amet, asperiores! Quasi dolores, quis facilis nisi perspiciatis ex eligendi voluptates quisquam, omnis neque illum! Porro, similique molestiae
+            </div>
+            
+
+            <div class="container cubic-shade" style="transform: translate(2000px ,00px);">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, atque. Numquam error commodi id fuga exercitationem reiciendis, eligendi suscipit ratione recusandae assumenda rerum officia veritatis aliquid quod quibusdam ad est iusto impedit ipsa, non odit aut. Ipsa inventore nihil provident harum illum molestiae reprehenderit veritatis, ipsum modi ab. Odit quos dignissimos doloribus? Quod, expedita repudiandae officiis iure blanditiis laudantium in modi repellendus, pariatur aut autem sint dicta itaque. Itaque delectus magni fugit cum inventore accusantium sequi aspernatur perferendis, assumenda ipsam distinctio aperiam nemo ullam, doloribus eligendi sed error minima aut sit odio ipsa. Placeat id, possimus laborum fuga dolor doloremque.
+            </div>
+        </div>    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *
+            {
+                font-size:50px;
+                font-family: 'Lato', sans-serif;
+                color:rgba(243, 213, 213, 0.9);
+            }
+            html
+            {
+                margin:100px;
+                background-color: black;
+            }
+            #btn-container 
+            {
+                display: inline-block;
+                margin-right: 100px;
+            }
+            button
+            {
+                padding:10px;
+                border-radius: 20px;
+                background-color: rgb(12, 12, 12);
+                transform: translate(6px,86.5px);
+                cursor: pointer;
+                transition-timing-function: ease-in-out;
+                transition-duration: 0.5s;
+            }
+            button:hover
+            {
+                background-color:rgb(12, 12, 12, 0);
+            }
+            button:active
+            {
+                cursor:none;
+            }
+            cursor
+            {
+                size: 50px;
+            }
+            #overflow
+            {
+                border: solid rgba(255, 255, 255, 0);
+                position: relative;
+                z-index: -2;
+                height: 85px;
+                width:265.7px;
+                overflow: hidden;
+                border-radius: 24px;
+                filter: blur(5.12px);
+
+            }
+            #rainbow
+            {
+                z-index: -1;
+                position: relative;
+                height:100%;
+                width:700px;
+                background-image: linear-gradient(110deg, red, yellow, blue, green, orange, red);
+                animation-name: animate;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-fill-mode: none;
+                animation-duration: 1.5s;
+                animation-direction: alternate;
+            }
+            @keyframes animate 
+            {
+                0%  {transform: translateX(-10px);}
+                100%{transform: translateX(-435px);}    
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btn-container">
+            <button>CLICK ME</button>
+            <div id="overflow">
+                <div id="rainbow"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

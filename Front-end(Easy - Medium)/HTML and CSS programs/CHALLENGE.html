@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #header
+        {
+            background-color:rgb(219, 218, 216);
+            width:auto;
+            height:300px;
+        }
+        #nav
+        {
+            background-color:rgb(24, 24, 26);
+            width:auto;
+            height:100px;
+            padding-left: 14px; 
+            background-image: linear-gradient(rgb(41, 41, 43), rgb(24, 24, 26), rgb(24, 24, 26), rgb(41, 41, 43)); 
+        }
+        button
+        {
+            font-size: 30px;  
+            border-radius: 20px;
+            border:solid rgb(24, 24, 26);
+            padding:0.5%;
+            margin-top: 25px;
+            background-color: rgb(255, 101, 41);
+            font-weight: bold;
+            cursor: pointer;
+            ;
+            
+        }
+        button:hover
+        {
+            background-color: rgb(255, 87, 21);
+            transition-timing-function:ease-in-out;
+            transition-delay:0.01s;
+            transition-duration:0.25s;
+        }
+        button:active
+        {
+            background-color: rgb(255, 43, 6);
+            transition-timing-function:ease-in-out;
+            transition-duration:0.0001s;
+        }
+        
+        li
+        {
+            
+            display:inline;
+            
+        }
+      
+        #body
+        {
+            background-color:rgb(192, 192, 192);
+            padding-top:20px;
+            padding-bottom:20px;
+            width:auto;
+            
+        }
+        .paper
+        {
+            font-size: 71px;
+            margin-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        
+        #home 
+        {
+            display:block;
+        }
+        #product 
+        {
+            display:none;
+        }
+        #contact 
+        {
+            display:none;
+            
+        }
+        #aboutUs 
+        {
+            display:none;
+        }
+        #headA
+        {
+            width:400px;
+            height:200px;
+            background-color: white;
+            float:left;
+            margin-left:10px;
+            border-radius: 20px;
+            background-image: linear-gradient(white, white, rgb(219, 218, 216),rgb(219, 218, 216));
+
+        }
+        #headB
+        {
+            width:450px;
+            height:300px;
+            background-color: white;
+            float:right;
+            margin-right:30px;
+            font-size: 30px;
+            border-radius: 20px;
+            background-image: linear-gradient(white, white, rgb(219, 218, 216),rgb(219, 218, 216));
+            padding-left:20px;
+        }
+        #comtag
+        {
+            font-size:50px;
+            font-family: Arial, Helvetica, sans-serif;
+            color:rgb(41, 91, 255);  
+        }
+        #invistag
+        {
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 500;
+            color:rgba(158, 158, 158, 0.87)
+        }
+        
+        
+
+       
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+        <div id="header">
+            <div id="headA">
+                <b id="comtag">ECOMTRADE</b><BR>
+                    <u id="invistag">Equipment & Engineering</u>
+            </div>
+            <div id="headB">
+               <b id="comtag" style="font-size: 30px;">Ecomtrade Holdings Pte Ltd.</b><br>
+                18 Boonlay Way,Tradehub 21,<br>
+                # 09-116,<br>
+                Singapore-609966.<br>
+                Tel: +65-98384024<br>
+                <u id="invistag" style="font-size:15px;">e-mail: gm.proposal@ecomoilngas.com</u><br>
+            </div>
+
+
+
+
+        </div>
+            <div id="nav">
+
+                <ul>
+                    <li><button onclick="document.getElementById('home').style.display='block' 
+                                         document.getElementById('product').style.display='none'
+                                         document.getElementById('contact').style.display='none'
+                                         document.getElementById('aboutUs').style.display='none'">HOME</button></li>
+
+
+
+                    <li><button onclick="document.getElementById('home').style.display='none' 
+                                         document.getElementById('product').style.display='block'
+                                         document.getElementById('contact').style.display='none'
+                                         document.getElementById('aboutUs').style.display='none'">PRODUCT</button></li>
+
+
+
+                    <li><button onclick="document.getElementById('home').style.display='none' 
+                                         document.getElementById('product').style.display='none'
+                                         document.getElementById('contact').style.display='block'
+                                         document.getElementById('aboutUs').style.display='none'">CONTACT</button></li>
+
+
+
+                    <li><button onclick="document.getElementById('home').style.display='none' 
+                                         document.getElementById('product').style.display='none'
+                                         document.getElementById('contact').style.display='none'
+                                         document.getElementById('aboutUs').style.display='block'">ABOUT US</button></li>
+
+
+
+                </ul>
+
+             </div>
+            <div id="body">
+                <p class="paper" id="home">   Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.</p>
+
+
+                <p class="paper" id="product">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, impedit?</p>
+
+
+                <p class="paper" id="contact" >Lorem ip dolor sit amet consectetur adipisicing elit.
+                                              Quod dignissimos blanditiis laboriosam odit nobis.</p>
+
+
+                <p class="paper" id="aboutUs">Lorem ipsum dolor<br>adipisicing.</p>
+
+
+            </div>
+            <hr>
+    
+
+
+
+
+
+
+</body>
+
+</html>

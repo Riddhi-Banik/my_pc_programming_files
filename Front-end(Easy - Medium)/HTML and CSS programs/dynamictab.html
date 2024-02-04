@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div
+            {
+                font-size: 50px;
+                font-family:Arial, Helvetica, sans-serif;
+                display:block;
+                
+
+            }
+            #txt
+            {
+
+              padding:0px;
+
+            }
+            #txt div
+            {
+                padding: 20px;;
+                border-radius: 20px;
+            }
+            button
+            {
+                font-size: 75px;
+                font-family: Arial, Helvetica, sans-serif;
+                display:inline-block;
+                padding: 0px 30px;
+                border-radius:20px;
+            }
+            button:hover
+            {
+                cursor: pointer;
+                transition-timing-function: ease-in-out;
+                transition-duration: 0.121s;
+                transform: scale(1.04, 1.04);
+            }
+            button:active
+            {
+                transform: scale(0.9, 0.9); 
+            }
+            #one, #Bone
+            {
+                background-color: rgb(202, 255, 186);
+                color: rgb(0, 228, 0);
+                border:solid rgb(0, 228, 0);
+            }
+            #two, #Btwo
+            {
+                background-color: rgb(255, 143, 143);
+                color: red;
+                border:solid red;
+            }
+            #three, #Bthree
+            {
+                background-color: rgb(255, 251, 201);
+                color: rgb(218, 218, 0);
+                border: solid rgb(218, 218, 0);
+            
+            }
+            #four, #Bfour
+            {
+                        
+                background-color: rgb(172, 173, 255);
+                color: blue;
+                border:solid blue;
+            
+            }
+            #btnhldr
+            {
+                margin-bottom: 30px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btnhldr">
+            <button id="Bone" onclick="
+                                document.getElementById('one').style ='display:block';
+                                document.getElementById('two').style ='display:none';
+                                document.getElementById('three').style ='display:none';
+                                document.getElementById('four').style ='display:none';">1</button>
+            <button id="Btwo" onclick="
+                    document.getElementById('one').style ='display:none';
+                    document.getElementById('two').style ='display:block';
+                    document.getElementById('three').style ='display:none';
+                    document.getElementById('four').style ='display:none';">2</button>
+            <button id="Bthree" onclick="
+                    document.getElementById('one').style ='display:none';
+                    document.getElementById('two').style ='display:none';
+                    document.getElementById('three').style ='display:block';
+                    document.getElementById('four').style ='display:none';">3</button>
+            <button id="Bfour" onclick="
+                    document.getElementById('one').style ='display:none';
+                    document.getElementById('two').style ='display:none';
+                    document.getElementById('three').style ='display:none';
+                    document.getElementById('four').style ='display:block';">4</button>
+        </div>
+        <div id="txt">
+            <div id="one" style="display: block;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, explicabo animi! Est voluptatibus distinctio quam neque veritatis voluptatum, ab provident, mollitia eaque rerum at sint possimus nulla atque beatae laudantium praesentium facere. Mollitia, commodi! Provident, nesciunt consectetur. Deleniti quis unde, sapiente inventore voluptates placeat vel facilis perferendis mollitia delectus fugit laudantium minima. Repellendus hic quas corporis libero ipsa aperiam, corrupti iure deleniti! Consequatur iure ducimus eius rem autem, corrupti recusandae ullam voluptate? Ducimus, inventore delectus debitis, perferendis repellendus cum facilis voluptatem iure iusto laboriosam pariatur alias ab porro aliquid vel iste. Nemo maiores minima perferendis voluptas odio. Enim doloribus dolores doloremque rem dolore commodi reprehenderit. Fugit ratione nam sunt nostrum dolores suscipit unde quidem exercitationem expedita reiciendis neque, iusto, autem nisi harum fuga tenetur maiores quisquam eum omnis vero temporibus debitis quam? Placeat id numquam ullam blanditiis odio dicta labore excepturi, provident quibusdam libero iure repellat ratione illo autem? Vitae, corrupti necessitatibus facere labore culpa expedita voluptate optio voluptatem, vel ab accusamus officia esse, sed aut nisi quidem enim iusto? Ut ducimus quam qui, autem, quae natus corporis odio minus distinctio sunt accusamus quas? Ipsa minima, ipsum provident voluptates deleniti accusamus nesciunt velit! Sunt corporis iure sapiente magnam. Laborum, illum!</div>
+            <div id="two"  style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reprehenderit adipisci corporis similique itaque excepturi inventore voluptatem officia natus reiciendis ab repellat aliquam, recusandae nobis praesentium eaque est officiis eos minima delectus velit. Facilis quibusdam explicabo aliquam mollitia neque aspernatur aut, reiciendis quam. Inventore ipsam nisi hic sed deleniti veritatis eligendi repellat, veniam repudiandae provident illum numquam, corrupti reiciendis eaque iusto, saepe itaque harum assumenda distinctio odit. Neque amet soluta pariatur quae repudiandae eaque mollitia? Porro nihil doloribus cupiditate dignissimos rerum quibusdam amet explicabo sit minima architecto dolorum similique aperiam ullam quaerat quia impedit, qui placeat autem? Qui odio culpa omnis error ratione laboriosam, recusandae est, quod quos perferendis tenetur saepe vel voluptatem possimus! Blanditiis, officia. Omnis repellendus in a, porro obcaecati placeat neque quos minus itaque quisquam nesciunt ad aperiam sequi iste dolores incidunt iusto. Et voluptatum error, maxime praesentium ab expedita! Perspiciatis beatae vero porro excepturi quod commodi odio, consequatur tenetur, sunt ipsa ad placeat incidunt optio fuga?</div>
+            <div id="three"style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id incidunt atque quos dolorem ut sequi praesentium totam provident quaerat, commodi suscipit illo ex voluptas non aperiam eum. Eos minus pariatur, nulla, dolor nihil natus autem inventore voluptate non illum ratione suscipit? Labore, ducimus provident? Commodi necessitatibus consequuntur atque est labore, vel, cumque dolorem quibusdam animi quaerat impedit itaque, placeat ipsum obcaecati! Labore cumque sunt illum placeat ex. Ab voluptatum dolore perferendis, porro amet ex nobis repudiandae aperiam magnam adipisci odit deserunt at vitae dolor ad! Molestias ratione voluptatum, itaque ad numquam saepe at totam aliquam eos quo nulla assumenda quae ipsa, sit eaque qui commodi beatae ut incidunt nostrum! Assumenda, recusandae. Illum enim fuga fugit voluptates incidunt repellendus voluptas ipsa sit perspiciatis magni consequatur qui consectetur minus quam, pariatur officiis reiciendis. Sapiente tempora omnis natus eveniet voluptas quo blanditiis reiciendis, ullam quod? Libero quidem laboriosam quis eaque nulla ipsam veniam et perspiciatis tempora eveniet harum quo alias sed eius quam animi quia, inventore provident ea, odio necessitatibus iusto reiciendis. Omnis temporibus mollitia quidem et nulla reprehenderit soluta quis alias sequi?</div>
+            <div id="four" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facilis blanditiis vel laboriosam, praesentium neque sit optio possimus repellendus quas recusandae eum omnis reprehenderit maiores velit cupiditate ipsa excepturi magnam, tempore voluptates reiciendis nihil temporibus amet. Inventore optio voluptate similique placeat sit, praesentium expedita, perferendis maxime vel dignissimos officia ad quam architecto quis quaerat, id corrupti. Rerum, soluta? Similique atque mollitia minus maiores laborum enim aliquid in expedita eos esse dolores delectus, veritatis suscipit neque ducimus molestiae, laboriosam ab fugit culpa necessitatibus aliquam id sed consequatur! Nam odit quod hic, voluptate exercitationem maxime nisi nesciunt magni veritatis, magnam tempora et ullam doloremque doloribus excepturi blanditiis ipsum. Illum mollitia numquam, eaque officiis incidunt ab distinctio? Corrupti deserunt ea odio eaque, reiciendis necessitatibus accusantium est quisquam! Quibusdam reprehenderit, repudiandae harum adipisci at optio placeat voluptates magnam, esse dolores dolorem aliquid, perferendis tempora! Exercitationem recusandae beatae alias, dicta distinctio aliquid suscipit atque, explicabo delectus culpa hic ipsam eius id. Id praesentium perferendis fugit itaque culpa alias, sequi, enim accusamus cum quidem facilis nesciunt eius omnis possimus consequatur doloremque quas! Reprehenderit exercitationem quis assumenda odit quasi vitae perferendis ad qui a molestias perspiciatis tenetur placeat quae aut quod nostrum facere, incidunt quo autem expedita natus est laborum totam. Odit ea laborum ipsa perferendis numquam omnis veritatis iste? Qui suscipit, provident facilis deleniti ab porro!</div>
+        </div>
+    </body>
+</html>
