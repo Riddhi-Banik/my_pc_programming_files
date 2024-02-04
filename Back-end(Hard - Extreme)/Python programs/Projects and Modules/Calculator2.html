@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <py-env>
+            - RDHI_AdvCustomModule.py
+            - _math 
+        </py-env>
+        <py-script style="display:none">
+            def input_panel(*args, **kwargs):
+                _ques = Element('ques_').element.value
+                _ques.strip()
+                _ques = input("Insert a mathematical question: ")
+                #_ques = "pi * 8^2"
+                _ques = _ques.strip()
+                #rdhi functions
+                _ques = _ques.replace("gcf", "_math.gcf_value_int")
+                _ques = _ques.replace("lcm", "_math.lcm_value_int")
+                _ques = _ques.replace("^","**")
+                #constants
+                _ques = _ques.replace("pi","(math.pi + 0)")
+                _ques = _ques.replace("e","(math.e + 0)")
+                _ques = _ques.replace("tau","math.tau")
+                #mathmetical_functions
+                _ques = _ques.replace("radCos","math.cos")
+                _ques = _ques.replace("radSin","math.sin")
+                _ques = _ques.replace("exp","math.exp")
+                _ques = _ques.replace('%','* 0.01')
+                _res = 0.0
+                try:
+                    _res = ("input_bar",eval(_ques))
+                except:
+                    pass
+                Element('result').element.innerText = result_
+        
+        </py-script>
+        
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <input id="ques_" type="text" placeholder="Write a Calculative Sentence...">
+        <div id="output">____________</div>
+    </body>
+</html>

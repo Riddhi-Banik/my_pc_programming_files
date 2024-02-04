@@ -1,0 +1,3 @@
+List of the students:
+*1: Name: Arish, Roll: 34, Section: G, Class: 7, Gender: Male
+*2: Name: Arisha, Roll: 343, Section: GY, Class: 76, Gender: Female
