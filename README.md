@@ -5,3 +5,5 @@ Then I started learning Python in 2023. I had frequently revised basics of pytho
 Then I learned using git and github. Since I'm new to this, I will spend some time on it.<br>
 Right now, I'm capable of writing basic Python codes, a little bit of git, HTML and CSS, and a bit of py-script.<br>
 As to academic skills, I'm good at Math and English.<br>
+As a python beginner, I don't have too much capabilities but after i learn linking HTML and individual softwares, then i can actually start making projects..
+Remember, full boxes are the heaviest boxes, useful boxes are the most valuable boxes. meaning a hard and a smart working man has the most value and the most desire to live in this world.
