@@ -1,0 +1,6 @@
+>   ____ is greater than ____
+<   ____ is less than ____	
+==  ____ is equal to ____
+>=  ____ is greater than or equal to ____
+<=  ____ is less than or equal to ____
+!=  ____ is not equal to ____

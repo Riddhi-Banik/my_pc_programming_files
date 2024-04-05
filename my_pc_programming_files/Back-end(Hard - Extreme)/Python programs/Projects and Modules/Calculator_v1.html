@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *
+        {
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600; 
+            margin:0px;
+            padding:0px;
+            color: white;
+        }
+        body
+        {
+            text-align: center;
+            height:950px;
+            width:100%;
+            overflow:hidden;
+        }
+        #container
+        {
+            background-color: rgba(0, 0, 0, 0.534);
+            text-align: center;
+            border-radius: 20px;
+            width: fit-content;
+            height: 700px;
+            padding: 45px;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-left:6.5%;
+            transform: translateY(10%);
+        }
+        #bg
+        {
+            height:950px;
+            width:100%;
+            background-image: linear-gradient(155deg, rgb(42, 71, 235), rgb(0, 197, 235), rgb(113, 32, 160) 80%);
+        }
+        #btn_hldr
+        {
+            margin-top:40px;
+        }
+        #shift
+        {
+            background-color: rgb(2, 13, 37);
+            color: rgb(0, 60, 255);
+            padding: 20px;
+            font-size: 120px;
+            width: 200px;
+            border-radius: 25px;
+            border-style: solid;
+            border-width: 0px;
+            
+        }
+        #shift:hover
+        {
+            background-color: rgb(1, 6, 17);
+            color: rgb(0, 47, 201);
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.5s;
+        }
+        #shift:active
+        {
+            background-color: rgb(0, 0, 0);
+            color: rgb(0, 33, 143);
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.001s;
+        }
+        #ques_
+        {
+            margin-top: 50px;
+            height: 100px;
+            width: 1500px;
+            padding: 20px;
+            border-radius: 20px;
+            border-style: none;
+            font-size: 100px;
+            background-color: black;
+            color:white;
+            letter-spacing: 5px;
+        }
+        #ques_:focus
+        {
+            border-style: none;
+            outline: none;
+        }
+        #result
+        {
+            height: fit-content;
+            width: fit-content;
+            margin-top: 30px;
+            margin-right:auto;
+            margin-left: auto;
+            
+            float: none;
+            padding: 20px;
+            border-radius: 20px;
+            border-style: none;
+            font-size: 100px;
+            background-color: black;
+            color:white;
+            letter-spacing: 5px;
+        }
+
+        
+    </style>
+    <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-script style="display: none;">
+        def numbers_only(numbers):  #fully finished.
+            numbers += "+"
+            num_container = []
+            temp_ = ""
+            for x in numbers:
+                if x in ["/", "*", "+", "-"]:
+                    num_container.append(float(temp_))    #the "float" here is changeable.
+                    temp_ = ""
+                elif x == " ":
+                    pass
+                else:
+                    temp_ += x
+            return num_container
+        def proces_only(numbers):  #fully finished.
+            res_ = []
+            for x in numbers:
+                if x in ["/", "*", "+", "-"]:
+                    res_.append(x)
+            return res_
+        def input_panel(*args, **kwargs):
+            ques = Element('ques_').element.value
+            ques.strip()
+            num_que = numbers_only(ques)
+            processors_que = proces_only(ques)
+            while "/" in processors_que:
+                sym_pos = processors_que.index("/")
+                result_ = num_que[sym_pos] / num_que[sym_pos + 1]
+                processors_que.remove("/")
+                num_que.pop(sym_pos)
+                num_que.pop(sym_pos)
+                num_que.insert(sym_pos, result_)
+            while "*" in processors_que:
+                sym_pos = processors_que.index("*")
+                result_ = num_que[sym_pos] * num_que[sym_pos + 1]
+                processors_que.remove("*")
+                num_que.pop(sym_pos)
+                num_que.pop(sym_pos)
+                num_que.insert(sym_pos, result_)
+            while "+" in processors_que:
+                sym_pos = processors_que.index("+")
+                result_ = num_que[sym_pos] + num_que[sym_pos + 1]
+                processors_que.remove("+")
+                num_que.pop(sym_pos)
+                num_que.pop(sym_pos)
+                num_que.insert(sym_pos, result_)
+            while "-" in processors_que:
+                sym_pos = processors_que.index("-")
+                result_ = num_que[sym_pos] - num_que[sym_pos + 1]
+                processors_que.remove("-")
+                num_que.pop(sym_pos)
+                num_que.pop(sym_pos)
+                num_que.insert(sym_pos, result_)
+            Element('result').element.innerText = result_
+    </py-script>
+</head>
+    <body>
+        <div id="bg">
+            <div id="container">
+                <div style="
+                        font-size: 80px;
+                    ">PY CALCULATOR</div>
+                <input id="ques_" type="text" placeholder="Write a Calculative Sentence..."><br>
+                <div id="btn_hldr">
+                    <button type="submit" id="shift" pys-onclick="input_panel">=</button>
+                </div>
+                <div id="result">____________</div>
+            </div>
+        </div>
+    </body>
+</html>

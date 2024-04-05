@@ -1,0 +1,10 @@
+<!--<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<py-env>
+- paths:
+    - /example.py
+</py-env>
+
+
+
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
