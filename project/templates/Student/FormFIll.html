@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Student management system</title>
+</head>
+<body>
+    <form action='.' method='post' enctype='multipart/form-data'>
+        {% csrf_token %}
+        {% for fields in form %}
+        {{fields.label_tag}}{{fields}}<br>
+        {% endfor %}
+        <input type='submit' value='submit'>
+    </form>
+    <div>
+        {% if obj %}
+        Student {{obj.name}} is registered successfully!
+        <br> Roll : {{obj.roll}}
+        <br> Section : {{obj.section}}
+        <br> GPA : {{obj.gpa}}
+        <br><br>
+        <img src='{{obj.photo.url}}'>
+        {% elif msg.dupe %}
+            Student {{obj.name}} already exists...
+        {% else %}
+        {% endif %}
+    </div>
+    <br><br>
+    <a href='{% url "homeURL" %}'>Click here to go back home.</a>
+    <br>
+    <a href='{% url "viewURL" %}'>Click here to view your's and other's database.</a>
+</body>
+</html>

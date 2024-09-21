@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View - Student management system</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <a href='{% url "homeURL" %}'>Click here to go back home.</a>
+    <br>
+    <a href='{% url "formURL" %}'>Click here to register your form.</a>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>roll</th>
+            <th>section</th>
+            <th>gpa</th>
+            <th>photo</th>
+        </tr>
+        {% for record in db %}
+        <tr>
+            <td>{{record.id}}</td>
+            <td>{{record.name}}</td>
+            <td>{{record.roll}}</td>
+            <td>{{record.section}}</td>
+            <td>{{record.gpa}}</td>
+            <td><img src="{{record.photo.url}}" alt="{{record.name}}" width="120", height="120"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
