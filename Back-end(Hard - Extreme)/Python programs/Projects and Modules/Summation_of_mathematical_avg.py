@@ -49,9 +49,10 @@ class Data:
         _fixi = self.fixi()
         return sum(_fixi) / sum(self.value)
     
-range_start = [20, 30, 40, 50, 60]
-range_end = [29, 39, 49, 59, 69]
-value = [10, 6, 18, 12, 8]
+# not using input() to avoid timeouts
+range_start = [20, 30, 40, 50, 60] # The start range of all fields arranged
+range_end = [29, 39, 49, 59, 69] # The end range of all fields arranged
+value = [10, 6, 18, 12, 8] # The value of all fields arranged
 print('Splices: ' + str(len(value)) + ' ; ValueSum: ' + str(sum(value)))
 data_point = Data(range_start, range_end, value)
 data_point.print_out()
